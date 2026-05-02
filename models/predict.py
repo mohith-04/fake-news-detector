@@ -11,7 +11,6 @@ from __future__ import annotations
 import logging
 import os
 import pickle
-
 from processing.preprocess import preprocess, detect_emotional_tone
 from utils.config import (
     BERT_MODEL_NAME,
@@ -89,7 +88,6 @@ def _heuristic_predict(text: str) -> dict:
         "raw_scores":  {"fake": round(total, 4), "real": round(1 - total, 4)},
     }
 
-
 # ── Public API ────────────────────────────────────────────────────────────────
 
 def predict(text: str, use_bert: bool = False) -> dict:
@@ -142,7 +140,6 @@ def predict(text: str, use_bert: bool = False) -> dict:
             }
         except Exception as exc:
             logger.warning("LR inference error: %s", exc)
-
     # 3. Heuristic
     logger.info("Falling back to heuristic predictor.")
     return _heuristic_predict(text)
