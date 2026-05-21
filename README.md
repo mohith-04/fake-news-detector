@@ -1,10 +1,10 @@
-# 🔍 Fake News Detector
+# Fake News Detector
 
 An advanced AI-powered misinformation detection system using NLP, fact-checking APIs, source credibility scoring, and explainable AI.
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 fake-news-detector/
@@ -45,7 +45,7 @@ fake-news-detector/
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### 1. Install dependencies
 
@@ -135,7 +135,7 @@ curl -X POST http://localhost:8000/analyze \
 
 ---
 
-## 🧠 Model Chain
+## Model Chain
 
 | Priority | Model | When used |
 |----------|-------|-----------|
@@ -145,7 +145,7 @@ curl -X POST http://localhost:8000/analyze \
 
 ---
 
-## 📊 Training Your Own Data
+##  Training Your Own Data
 
 Compatible public datasets:
 - [LIAR dataset](https://www.cs.ucsb.edu/~william/data/liar_dataset.zip)
@@ -156,7 +156,7 @@ Place CSVs (columns `text`, `label` where 1=fake, 0=real) in `data/raw/` and re-
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 All knobs are in `utils/config.py`:
 - `FAKE_THRESHOLD` – probability cutoff for FAKE label
